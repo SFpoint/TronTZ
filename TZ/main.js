@@ -3,6 +3,10 @@ $(document).mouseleave(function (e) {
     $(".exitblock").fadeIn("fast");
   }
 });
+
+$(window).on("beforeunload", function () {
+  return $(".exitblock").fadeIn("fast");
+});
 $(document).click(function (e) {
   if (
     $(".exitblock").is(":visible") &&
